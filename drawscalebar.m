@@ -5,8 +5,8 @@ cb = colorbar;
 axis off
 
 colormap('jet');
-TickMin = 0;
-TickMax = 5e-02;
+TickMin = -8.56E03;
+TickMax = 6.44E05;
 NumTick = 6;
 sigfigs = 2;
 fmt = sprintf('%%.%df',sigfigs-1);

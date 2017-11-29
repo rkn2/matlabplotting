@@ -6,8 +6,8 @@ axis off
 
 colormap('jet');
 TickMin = 0;
-TickMax = 6.5E-02;
-NumTick = 4;
+TickMax = 5e-02;
+NumTick = 6;
 sigfigs = 2;
 fmt = sprintf('%%.%df',sigfigs-1);
 YTick = linspace(TickMin,TickMax,NumTick);
@@ -18,15 +18,15 @@ end
 
 
 %vertical
- %set(cb,'Position',...
-      %[0.496669694068501 0.715966386554625 0.0419315775027976 0.195798319327735],...
-      %'YTick', YTick, 'YTickLabel', YTickLabel)
+ set(cb,'Position',...
+      [0.496669694068501 0.715966386554625 0.0419315775027976 0.195798319327735],...
+      'YTick', YTick, 'YTickLabel', YTickLabel)
 
-%horizontal
-set(cb,'location','southoutside','YTick', YTick, 'YTickLabel', YTickLabel)
+% %horizontal
+% set(cb,'location','southoutside','YTick', YTick, 'YTickLabel', YTickLabel)
 
-set(cb,'TickLabelInterpreter','latex','FontSize', 30)
+set(cb,'TickLabelInterpreter','latex','FontSize', 24)
 caxis([TickMin,TickMax])
 caxis([TickMin,TickMax])
 %title({'Displacement';'magnitude (m)'})
-title('Max P. Stress')
+%title('Max P. Stress')

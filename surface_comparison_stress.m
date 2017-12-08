@@ -179,9 +179,10 @@ zgrid = zgrid(ysort(:,2),:);
 bc2Plot = surf(xgrid,ygrid,zgrid,'FaceColor', 'm');
 
 %nobc = surf(all_data_noBC(:,1),all_data_noBC(:,2),all_data_noBC(:,3), 'FaceColor', 'b', 'FaceAlpha', 0.5, 'EdgeColor', 'none');
-title('Bc vs nobc')
-xlabel('width')
-ylabel('depth')
-zlabel('max principal stress')
-legend([bc0Plot,bc1Plot,bc2Plot], {'noBC', 'BC1', 'BC2'})
-set(gca, 'zscale', 'log','FontName','latex')
+title('Comparison of max. principal stress','Interpreter','latex','FontSize', 24)
+xlabel('Settlement width (m)', 'Interpreter','latex','FontSize', 24)
+ylabel('Settlement depth (m)','Interpreter','latex','FontSize', 24)
+zlabel('Avg. max. principal stress (N/m2)', 'Interpreter','latex','FontSize', 24)
+legend([bc0Plot,bc1Plot,bc2Plot], {'noBC', 'BC1', 'BC2'}, 'Interpreter','latex','FontSize', 24)
+set(gca, 'zscale', 'log','FontName','latex','FontSize', 36)
+set(gcf, 'PaperPositionMode', 'auto');

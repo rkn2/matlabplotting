@@ -5,8 +5,8 @@ cb = colorbar;
 axis off
 
 colormap('jet');
-TickMin = 0;
-TickMax = 0.1;
+TickMin = 0.001;
+TickMax = 0.05;
 NumTick = 6;
 sigfigs = 2;
 fmt = sprintf('%%.%df',sigfigs-1);
@@ -18,12 +18,12 @@ end
 
 
 %vertical
-  set(cb,'Position',...
-       [0.496669694068501 0.715966386554625 0.0419315775027976 0.195798319327735],...
-       'YTick', YTick, 'YTickLabel', YTickLabel)
+%    set(cb,'Position',...
+%         [0.496669694068501 0.715966386554625 0.0419315775027976 0.195798319327735],...
+%         'YTick', YTick, 'YTickLabel', YTickLabel)
 
 % %horizontal
-%set(cb,'location','southoutside','YTick', YTick, 'YTickLabel', YTickLabel)
+set(cb,'location','southoutside','YTick', YTick, 'YTickLabel', YTickLabel)
 
 set(cb,'TickLabelInterpreter','latex','FontSize', 24)
 caxis([TickMin,TickMax])

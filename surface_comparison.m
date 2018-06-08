@@ -183,6 +183,6 @@ title('Comparison of vertical displacement','Interpreter','latex','FontSize', 36
 xlabel('Settlement width (m)', 'Interpreter','latex','FontSize', 24)
 ylabel('Settlement depth (m)','Interpreter','latex','FontSize', 24)
 zlabel('Avg. vertical displacement (m)', 'Interpreter','latex','FontSize', 24)
-legend([bc0Plot,bc1Plot,bc2Plot], {'noBC', 'BC1', 'BC2'},'FontSize', 24)
+legend([bc0Plot,bc1Plot,bc2Plot], {'noBC', 'BC1', 'BC2'},'FontSize', 36)
 set(gca, 'zscale', 'log','FontName','latex','FontSize', 36)
 set(gcf, 'PaperPositionMode', 'auto');

@@ -1,5 +1,5 @@
-A = [1, 0.006489; 1, 0.00642];
-B = [2, 0.00657; 2, 0.00672];
+A = [1, 0.00589; 1, 0.00612];
+B = [2, 0.00587; 2, 0.00622];
 C = [3, 0.00587; 3, 0.00641];
 D = [4, 0.00563; 4, 0.00742];
 
@@ -39,16 +39,16 @@ lowerPlot = plot(lower(:,1),lower(:,2),'g*','MarkerSize',10,'MarkerFaceColor','g
 errorbar(higher(:,1),higher(:,2),higherE,'bo', 'MarkerSize',0.001,'LineWidth',1.5)
 errorbar(lower(:,1),lower(:,2),lowerE,'go', 'MarkerSize',0.001,'LineWidth',1.5)
 
-names = {'Density', 'Jkn', 'Jks', 'Jfric'};
+names = {'\rho', 'j_{ns}', 'j_{ss}', '\phi'};
 
 
 title('Distance to lab testing','Interpreter','latex','FontSize', 36)
 
-legend([higherPlot,lowerPlot,], {'10% higher','10% lower'},'Interpreter','latex','FontSize', 24)
+legend([higherPlot,lowerPlot], {'10% higher','10% lower'},'Interpreter','latex','FontSize', 24)
 set(gca,'FontName','latex','FontSize', 24,'LineWidth',2,'XMinorTick','on',...
     'YMinorTick','on', 'TickLength', [.025 .0125],'Box', 'on','XTick',(1:1:4),'xticklabel',names)
 xlim([0 5])
-xlabel('Trial', 'Interpreter','latex','FontSize', 24)
+xlabel('Parameter', 'Interpreter','latex','FontSize', 24)
 ylabel('Geometric distance (m)','Interpreter','latex','FontSize', 24)
 
 %plot real information
@@ -56,8 +56,4 @@ y = 0.0059;
 A = line([0,6],[y,y],'Color','k','LineStyle','--');
 r = rectangle('Position',[0 0.0049 6 0.002]);
 r.FaceColor = [.5 .5 .5 0.1];
-
-
-
-%
 
